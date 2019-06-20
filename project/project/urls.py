@@ -25,6 +25,5 @@ urlpatterns = [
     path('login/', csrf_exempt(loginout.Login.as_view()), name='login'),
     path('logout/', loginout.Logout.as_view(), name='logout'),
     path('signup/', csrf_exempt(loginout.signup), name='signup'),
-    path('', include('rest.urls')),
     path('api-token-auth/', views.obtain_auth_token)
 ]
